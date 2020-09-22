@@ -27,12 +27,11 @@ public class Bank {
     }
 
     public void transfer(int from, int to, int amount) {
-        // accounts[from].waitForAvailableFunds(amount);
         if (accounts[from].withdraw(amount)) {
             accounts[to].deposit(amount);
         }
         
-        // Uncomment line when race condition in test() is fixed.
+        // Uncomment line when ready to start Task 3.
         // if (shouldTest()) test();
     }
 
